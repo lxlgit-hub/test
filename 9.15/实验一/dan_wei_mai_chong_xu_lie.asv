@@ -1,0 +1,2 @@
+[x,n]= impseq(-2,-3,3);
+figure;stem(n,x)

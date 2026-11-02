@@ -1,0 +1,14 @@
+a=0.8;ys=1;
+xn=[1,zeros(1,30)];
+B=1;A=[1,-a];
+xi=filtic(B,A,ys);
+yn=filter(B,A,xn,xi);
+n=0:length(yn)-1;
+subplot(2,1,1);stem(n,yn,'.')
+title('(a)');xlabel('n');ylabel('y(n)')
+ys=0;
+xi=filtic(B,A,ys);
+yn=filter(B,A,xn,xi);
+n=0:length(yn)-1;
+subplot(2,1,2);stem(n,yn,'.')
+title('(b)');xlabel('n');ylabel('y(n)')

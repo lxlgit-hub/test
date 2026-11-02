@@ -1,0 +1,4 @@
+x = stepseq(0,0,5)-stepseq(4,0,5);
+n = 0:length(x)-1;
+figure;
+stem(n,x,'.'):axis([-3,11,-0.1,1.1])
